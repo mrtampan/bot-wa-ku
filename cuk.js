@@ -4,7 +4,9 @@ var dataNomor = [];
 let fourHour = new Date();
 fourHour.setHours(fourHour.getHours() + 4);
 
-wa.create().then(client => start(client));
+wa.create()
+.then(client => start(client))
+.catch(console.log("error"));
 
 function start(client) {
   client.onMessage(message => {
